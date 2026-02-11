@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+@import url('https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float');
+
+
+
+h1{
+    font-family: Arial, sans-serif;
+    color: #fff;
+    font-size: 48px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: bold;
+}
+
+
+
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe5e5;
+    background-image: url("sugar_cotton_candy_pink_clouds_background_0302.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    margin: 20px;
+}
+
+
+.tenor-gif-embed {
+    width: 340px;
+    max-width: 20vw;
+    border-radius: 24px;
+    overflow: hidden;              /* 👈 clave para redondear el gif real */
+    
+    background: #ffffff;
+    padding: 8px;                  /* marco interno */
+
+    box-shadow: 
+        0 20px 40px rgba(0,0,0,.25),
+        0 8px 16px rgba(0,0,0,.15);
+
+    transform: scale(1.05);
+}
+
+.container .btn {
+    display: flex;
+    gap: 25px;
+}
+
+.btn {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #ff4e8a, #c21875);
+    padding: 12px 28px;
+    border-radius: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    box-shadow: 0 12px 28px rgba(0,0,0,.25);
+    transition: all .25s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(135deg,#ff4e8a,#ff6fa5,#ff9ec7,#ffd6e7);
+}
+
+/* CONTENEDOR CENTRAL */
+.center {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* ===== SOBRE CERRADO REALISTA ===== */
+
+.envelope {
+    width: 250px;
+    height: 165px;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 24px 48px rgba(0,0,0,.25));
+    background: linear-gradient(#fff,#ffe9f1);
+    border-radius: 10px;
+}
+
+/* tapa superior triangular */
+.envelope::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 115px solid transparent;
+    border-right: 125px solid transparent;
+    border-top: 88px solid #ffd6e6;
+    top: 0;
+    left: 5px;
+    z-index: 3;
+}
+
+/* pliegue inferior */
+.envelope::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 115px solid transparent;
+    border-right: 125px solid transparent;
+    border-bottom: 88px solid #ffc2da;
+    bottom: 0;
+    left: 5px;
+    opacity: .6;
+}
+
+/* sello */
+.letter {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    background: #ff2e63;
+    border-radius: 50%;
+    z-index: 4;
+    left: 50%;
+    top: 58px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    box-shadow: 0 8px 18px rgba(0,0,0,.25);
+    cursor: pointer;
+}
+.letter::before {
+    content: "❤";
+}
+/* contador */
+
+#timer {
+    margin-top: 30px;
+    font-size: 42px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ===== corazones ===== */
+#hearts {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff1e56;
+    transform: rotate(45deg);
+    opacity: .85;
+    filter: drop-shadow(0 0 6px rgba(255,0,80,.4));
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.heart::before { top: -50%; left: 0; }
+.heart::after { left: -50%; top: 0; }
+
+@keyframes rise {
+    from {
+        transform: translateY(0) rotate(45deg) scale(.6);
+        opacity: .9;
+    }
+    to {
+        transform: translateY(-140vh) rotate(45deg) scale(1.3);
+        opacity: 0;
+    }
+}
+
+/* ===== animaciones ===== */
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes pulse {
+    0%,100% { transform: translate(-50%,-50%) scale(1); }
+    50% { transform: translate(-50%,-50%) scale(1.15); }
+}
+
+.letter {
+    cursor: pointer;
+}
