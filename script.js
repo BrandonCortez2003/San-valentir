@@ -93,7 +93,7 @@ function startCountdown(durationMs) {
             clearInterval(interval);
             timer.textContent = "00:00:00:00";
 
-                   window.location.href = "san valentin.html";
+                   showLoveLoaderAndRedirect();
             return;
         }
 
@@ -131,3 +131,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+
+function showLoveLoaderAndRedirect() {
+
+    const loader = document.createElement("div");
+    loader.className = "loader-overlay";
+
+    loader.innerHTML = `
+        <div class="loader-heart">💖</div>
+        Cargando sorpresa...
+        <div class="loader-bar">
+            <div class="loader-fill"></div>
+        </div>
+    `;
+
+    document.body.appendChild(loader);
+
+    setTimeout(() => {
+        window.location.href = "san valentin.html";
+    }, 1600);
+}

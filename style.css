@@ -326,3 +326,56 @@ body {
         transform: translateX(120vw);
     }
 }
+
+
+/* ===== LOADER ===== */
+
+.loader-overlay {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg,#ff4e8a,#ff6fa5,#ff9ec7,#ffd6e7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    animation: fadeIn .4s ease;
+}
+
+.loader-heart {
+    font-size: 80px;
+    animation: beat 1s infinite;
+}
+
+.loader-bar {
+    width: 180px;
+    height: 10px;
+    background: rgba(255,255,255,.35);
+    border-radius: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.loader-fill {
+    height: 100%;
+    width: 0%;
+    background: white;
+    animation: loadBar 1.6s linear forwards;
+}
+
+@keyframes beat {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+}
+
+@keyframes loadBar {
+    to { width: 100%; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
