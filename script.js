@@ -1,5 +1,44 @@
 
 
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const cloudContainer = document.getElementById("clouds");
+
+    function createCloud() {
+        if (!cloudContainer) return;
+
+        const c = document.createElement("div");
+        c.className = "cloud";
+
+        const w = Math.random() * 120 + 80;
+        const h = w * 0.55;
+
+        c.style.width = w + "px";
+        c.style.height = h + "px";
+
+        c.style.top = Math.random() * 80 + "%";
+        c.style.left = "-200px";
+
+        const duration = Math.random() * 25 + 20;
+
+        c.style.animation = `cloudFloat ${duration}s linear forwards`;
+
+        cloudContainer.appendChild(c);
+
+        setTimeout(() => c.remove(), duration * 1000);
+    }
+
+    // crear algunas nubes al iniciar
+    for (let i = 0; i < 5; i++) {
+        createCloud();
+    }
+
+    // luego seguir creando
+    setInterval(createCloud, 1800);
+
+});
+
 /* ===== CORAZONES ===== */
 
 const container = document.getElementById("hearts");
