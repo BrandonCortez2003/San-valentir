@@ -77,7 +77,7 @@ letter.addEventListener("click", () => {
     if (countdownRunning) return;
     countdownRunning = true;
 
-    startCountdown(23000); // 23 segundos reales
+    startCountdown(5000); // 23 segundos reales
 });
 
 
