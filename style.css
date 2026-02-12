@@ -5,7 +5,7 @@
 
 
 h1{
-    font-family: Arial, sans-serif;
+    font-weight: bold;
     color: #fff;
     font-size: 48px;
 }
@@ -46,13 +46,13 @@ body {
 
 .tenor-gif-embed {
     width: 340px;
-    max-width: 20vw;
+    max-width: 50vw;
     border-radius: 24px;
     overflow: hidden;              /* 👈 clave para redondear el gif real */
     
     background: #ffffff;
     padding: 8px;                  /* marco interno */
-
+    margin-bottom: 60px;
     box-shadow: 
         0 20px 40px rgba(0,0,0,.25),
         0 8px 16px rgba(0,0,0,.15);
@@ -117,67 +117,78 @@ body {
     align-items: center;
     justify-content: center;
 }
-/* ===== SOBRE CERRADO REALISTA ===== */
+
+/* ===== SOBRE GRANDE ORDENADO ===== */
 
 .envelope {
-    width: 250px;
-    height: 165px;
+    width: 450px;
+    height: 335px;
     position: relative;
     animation: float 3s ease-in-out infinite;
     filter: drop-shadow(0 24px 48px rgba(0,0,0,.25));
     background: linear-gradient(#fff,#ffe9f1);
-    border-radius: 10px;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-/* tapa superior triangular */
+/* ===== tapa superior ===== */
 .envelope::before {
     content: "";
     position: absolute;
+
     width: 0;
     height: 0;
-    border-left: 115px solid transparent;
-    border-right: 125px solid transparent;
-    border-top: 88px solid #ffd6e6;
+
+    border-left: 225px solid transparent;
+    border-right: 225px solid transparent;
+    border-top: 160px solid #ffd6e6;
+
     top: 0;
-    left: 5px;
+    left: 0;
     z-index: 3;
 }
 
-/* pliegue inferior */
+/* ===== pliegue inferior ===== */
 .envelope::after {
     content: "";
     position: absolute;
+
     width: 0;
     height: 0;
-    border-left: 115px solid transparent;
-    border-right: 125px solid transparent;
-    border-bottom: 88px solid #ffc2da;
+
+    border-left: 225px solid transparent;
+    border-right: 225px solid transparent;
+    border-bottom: 160px solid #ffc2da;
+
     bottom: 0;
-    left: 5px;
+    left: 0;
     opacity: .6;
 }
 
 /* sello */
 .letter {
     position: absolute;
-    width: 44px;
-    height: 44px;
+    width: 80px;
+    height: 80px;
     background: #ff2e63;
     border-radius: 50%;
     z-index: 4;
+
     left: 50%;
-    top: 58px;
+    top: 130px;
     transform: translateX(-50%);
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     color: white;
-    font-size: 22px;
-    box-shadow: 0 8px 18px rgba(0,0,0,.25);
+    font-size: 28px;
+    box-shadow: 0 10px 22px rgba(0,0,0,.25);
     cursor: pointer;
 }
 .letter::before {
-    content: "❤";
+    content: "T❤B";
 }
 /* contador */
 
