@@ -204,7 +204,7 @@ body {
     cursor: pointer;
 }
 .letter::before {
-    content: "T❤B";
+    content: "❤";
 }
 /* contador */
 
